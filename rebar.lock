@@ -1,0 +1,4 @@
+[{<<"eredis">>,
+  {git,"git://github.com/wooga/eredis.git",
+       {ref,"c24dfb2f3e9fca7d022beecf8eb85539b9466448"}},
+  0}].
