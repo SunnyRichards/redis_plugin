@@ -86,39 +86,39 @@ delete_multiple_pair(KeyList)  when is_list(KeyList)->
 %%%---------------------------------------------------------------------------------------------------------------------
 
 insert_hash(Key,ValuePairs)  when is_list(ValuePairs)->
-  {ok, Connection} = eredis:start_link("13.127.111.209",6379),
+  {ok, Connection} = eredis:start_link(localhost,6379),
   eredis:q(Connection, ["HMSET", Key | ValuePairs]).
 
 read_single_hash_field(Key,Field) ->
-  {ok, Connection} = eredis:start_link("13.127.111.209",6379),
+  {ok, Connection} = eredis:start_link(localhost,6379),
   eredis:q(Connection, ["HGET", Key, Field]).
 
 read_multiple_hash_field(Key,FieldList) ->
-  {ok, Connection} = eredis:start_link("13.127.111.209",6379),
+  {ok, Connection} = eredis:start_link(localhost,6379),
   eredis:q(Connection, ["HMGET", Key | FieldList]).
 
 read_entire_hash(Key) ->
-  {ok, Connection} = eredis:start_link("13.127.111.209",6379),
+  {ok, Connection} = eredis:start_link(localhost,6379),
   eredis:q(Connection, ["HGETALL", Key]).
 
 read_all_keys(Key) ->
-  {ok, Connection} = eredis:start_link("13.127.111.209",6379),
+  {ok, Connection} = eredis:start_link(localhost,6379),
   eredis:q(Connection, ["HKEYS", Key]).
 
 read_all_values(Key) ->
-  {ok, Connection} = eredis:start_link("13.127.111.209",6379),
+  {ok, Connection} = eredis:start_link(localhost,6379),
   eredis:q(Connection, ["HVALS", Key]).
 
 update_single_hash_field(Key,Field,Value) ->
-  {ok, Connection} = eredis:start_link("13.127.111.209",6379),
+  {ok, Connection} = eredis:start_link(localhost,6379),
   eredis:q(Connection, ["HSET", Key, Field, Value]).
 
 delete_hash_fields(Key,FieldList) ->
-  {ok, Connection} = eredis:start_link("13.127.111.209",6379),
+  {ok, Connection} = eredis:start_link(localhost,6379),
   eredis:q(Connection, ["HDEL", Key | FieldList]).
 
 delete_entire_hash(Key) ->
-  {ok, Connection} = eredis:start_link("13.127.111.209",6379),
+  {ok, Connection} = eredis:start_link(localhost,6379),
   eredis:q(Connection, ["DEL", Key]).
 
 
