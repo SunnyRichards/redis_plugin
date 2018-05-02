@@ -127,7 +127,7 @@ delete_entire_hash(Key) ->
 %%%---------------------------------------------------------------------------------------------------------------------
 
 create_alert(Key) ->
-{ok, Connection} = eredis:start_link("13.127.111.209",6379),
+{ok, Connection} = eredis:start_link(localhost,6379),
 FieldList = record_info(fields, alert_info),
 [_RecordName|ValueList] = tuple_to_list(#alert_info{}),
 ValuePairs = make_pairs(FieldList,ValueList,[]),
