@@ -1,8 +1,8 @@
-# [redis_plugin](https://www.transecur.com)
+# [redis_plugin](https://github.com/SunnyRichards/redis_plugin)
 
 ## Contacts
 
-Author - Sunny Richards  ([sunny@lynkit.in](mailto:sunny@lynkit.in))
+Author - Sunny Richards  ([sunny@redbus.com](mailto:sunny@redbus.com))
 
 Website - [https://www.transecur.com](https://www.transecur.com)
 
