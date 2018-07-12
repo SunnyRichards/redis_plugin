@@ -9,19 +9,19 @@
 -module(redis_interface).
 -author("sunnyrichards").
 
-%   -record(alert_info, {
-%     alert_initiation_status = true :: boolean(),
-%     low_battery_alert = false :: boolean(),
-%     critical_battery_alert = false :: boolean(),
-%     geo_source_alert = true :: boolean(),
-%     geo_in_transit_alert = true :: boolean(),
-%     geo_destination_alert = true :: boolean(),
-%     geo_forbidden_alert = false :: boolean(),
-%     idle_state_alert = false :: boolean(),
-%     alarm_report_alert = false :: boolean(),
-%     status_report_alert = false :: boolean(),
-%     device_lock_alert = true :: boolean()
-%   }).
+  -record(alert_info, {
+    alert_initiation_status = true :: boolean(),
+    low_battery_alert = false :: boolean(),
+    critical_battery_alert = false :: boolean(),
+    geo_source_alert = true :: boolean(),
+    geo_in_transit_alert = true :: boolean(),
+    geo_destination_alert = true :: boolean(),
+    geo_forbidden_alert = false :: boolean(),
+    idle_state_alert = false :: boolean(),
+    alarm_report_alert = false :: boolean(),
+    status_report_alert = false :: boolean(),
+    device_lock_alert = true :: boolean()
+  }).
 
 %% API
 -export([connect/0]).
